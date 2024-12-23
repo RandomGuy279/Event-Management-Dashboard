@@ -1,0 +1,59 @@
+{
+    "database": {
+        "type": "mongodb",
+        "host": "127.0.0.1",
+        "port": 27017,
+        "name": "eventmanagement",
+        "collections": {
+            "events": "events",
+            "users": "users",
+            "tasks": "tasks",
+            "attendees": "attendees"
+        }
+    },
+    "server": {
+        "host": "127.0.0.1",
+        "port": 5000
+    },
+    "logConfiguration": {
+        "version": 1,
+        "disable_existing_loggers": false,
+        "formatters": {
+            "default": {
+                "format": "%(levelname)s %(asctime)s - %(message)s"
+            }
+        },
+        "handlers": {
+            "default": {
+                "class": "logging.StreamHandler",
+                "formatter": "default"
+            }
+        },
+        "loggers": {
+            "uvicorn.error": {
+                "level": "INFO",
+                "handlers": ["default"],
+                "propagate": false
+            },
+            "uvicorn.access": {
+                "level": "INFO",
+                "handlers": ["default"],
+                "propagate": false
+            }
+        },
+        "root": {
+            "level": "INFO",
+            "handlers": ["default"]
+        }
+    },
+    "defaultUser": {
+        "username": "admin",
+        "password": "admin",
+        "role": "admin"
+    },
+    "jwtSettings": {
+        "secretKey": "testsecretkey",   
+        "algorithm": "HS256",             
+        "accessTokenExpireMinutes": 2880
+    }
+}

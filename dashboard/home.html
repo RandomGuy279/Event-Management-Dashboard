@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Event Management Dashboard</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#" id="eventsLink">Events</a></li>
+            <li><a href="#" id="tasksLink">Tasks</a></li>
+            <li><a href="#" id="attendeesLink">Attendees</a></li>
+            <li><button onclick="logout()">Logout</button></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="top-bar">
+            <span>Howdy, Admin!</span>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <div class="main-content" id="mainContent">
+            <h1>Welcome to the Management Dashboard</h1>
+            <p>Use the menu on the left to navigate through Events, Tasks, and Attendees.</p>
+
+            <!-- Table container for dynamic data -->
+            <div id="tableContainer" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>

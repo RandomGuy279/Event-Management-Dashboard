@@ -1,0 +1,8 @@
+fastapi
+gunicorn
+pymongo
+pyjwt
+websockets
+pydantic
+python-multipart
+pydantic[email]
